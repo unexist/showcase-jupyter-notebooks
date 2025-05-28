@@ -2,6 +2,14 @@
 
 This project holds an example for Jupyter Notetooks related tooling.
 
+== Tasks
+
+|===
+| notebook | Start the Jupyter backend
+| populate | Prepare and populate the demo databases
+| build | Convert the notebook to HTML
+|===
+
 == Links
 
 - https://jupyter.org/
