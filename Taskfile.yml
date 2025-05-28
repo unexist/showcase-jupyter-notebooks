@@ -16,7 +16,7 @@ tasks:
     internal: true
     cmds:
       - |
-        cat << EOF | sqlite3 {{.DBNAME}}-showcase.db
+        cat << EOF | sqlite3 showcase-{{.DBNAME}}.db
         CREATE TABLE users (id serial primary key, email varchar(255), name varchar(255));
         INSERT INTO users (id, email, name) VALUES(1, '{{.EMAIL}}', '{{.USERNAME}}');
         EOF
@@ -27,11 +27,4 @@ tasks:
         vars: { DBNAME: "database1", EMAIL: "christoph@unexist.dev", USERNAME: "unexist" }
       - task: populate-db
         vars: { DBNAME: "database2", EMAIL: "christoph@unexist.dev", USERNAME: "unexist" }
-
-  extension:
-    cmds:
-      - pip install hide_code --break-system-packages
-      - jupyter nbextension install --py hide_code
-      - jupyter nbextension enable --py hide_code
-      - jupyter serverextension enable --py hide_code
 
