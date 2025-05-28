@@ -1,0 +1,21 @@
+version: '3'
+
+tasks:
+  run:
+    cmds:
+      - jupyter notebook
+
+  build:
+    - jupyter nbconvert --to html --TagRemovePreprocessor.remove_cell_tags='{"hide_code"}' Showcase.ipynb
+
+  install:
+    cmds:
+      - pip install jupysql --break-system-packages
+
+  extension:
+    cmds:
+      - pip install hide_code --break-system-packages
+      - jupyter nbextension install --py hide_code
+      - jupyter nbextension enable --py hide_code
+      - jupyter serverextension enable --py hide_code
+
