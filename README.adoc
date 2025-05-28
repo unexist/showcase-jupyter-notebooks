@@ -1,0 +1,9 @@
+= Showcase for Jupyter Notebooks
+
+This project holds an example for Jupyter Notetooks related tooling.
+
+== Links
+
+- https://jupyter.org/
+- https://ipywidgets.readthedocs.io/en/latest/
+- https://jupysql.ploomber.io/en/latest/quick-start.html
