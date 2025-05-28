@@ -1,0 +1,13 @@
+syntax: glob
+
+**/*.iml
+
+target/
+.idea/
+.mvn/
+
+.task/
+
+__pycache__/
+.ipynb_checkpoints/
+*.html
